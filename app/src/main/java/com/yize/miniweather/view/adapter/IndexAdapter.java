@@ -43,7 +43,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
         holder.tv_index_info.setText(index.getInfo());
         holder.tv_index_name.setText(index.getName());
         //Log.i("指数调试","onBindViewHolder()"+index.toString());
-        Glide.with(context).load(R.mipmap.night_cloud).override(50).into(holder.iv_index_icon);
+        Glide.with(context).load(R.mipmap.lifestyle).override(50).into(holder.iv_index_icon);
         holder.iv_index_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

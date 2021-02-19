@@ -27,6 +27,7 @@ import com.yize.miniweather.util.HttpLiteBusHelper;
 import com.yize.miniweather.view.adapter.DayAdapter;
 import com.yize.miniweather.view.adapter.HourAdapter;
 import com.yize.miniweather.view.adapter.IndexAdapter;
+import com.yize.miniweather.view.adapter.IndexDetailAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,12 +46,15 @@ public class CityFragment extends Fragment {
     private RecyclerView rv_hour_list;
     private RecyclerView rv_day_list;
     private RecyclerView rv_index_list;
+    private RecyclerView rv_index_detail_list;
     private HourAdapter hourAdapter;
     private DayAdapter dayAdapter;
     private IndexAdapter indexAdapter;
+    private IndexDetailAdapter indexDetailAdapter;
     private List<WeatherBean.ForecastHour> forecastHourList=new ArrayList<>(48);
     private List<WeatherBean.ForecastDay> forecastDayList=new ArrayList<>(15);
     private List<WeatherBean.Index> indexList=new ArrayList<>(9);
+    private List<WeatherBean.Index> indexDetailList = new ArrayList<>(100);
     private boolean showMore=true;
 
     private CityDatabaseHelper dbHelper;
@@ -128,6 +132,11 @@ public class CityFragment extends Fragment {
         rv_index_list.setLayoutManager(indexManager);
         indexAdapter=new IndexAdapter(indexList);
         rv_index_list.setAdapter(indexAdapter);
+
+        GridLayoutManager indexDetailManager = new GridLayoutManager(view.getContext(),4);
+        rv_index_detail_list.setLayoutManager(indexDetailManager);
+        indexDetailAdapter = new IndexDetailAdapter(indexDetailList);
+        rv_index_detail_list.setAdapter(indexDetailAdapter);
     }
 
     private int retryCount=0;
@@ -178,6 +187,21 @@ public class CityFragment extends Fragment {
                 indexList.add(indexs.getUltraviolet());
                 indexAdapter.notifyDataSetChanged();
                 Log.i("Fragment更新","天气指数");
+
+                //天气指数细节填充
+                if(indexDetailList.size()!=0){
+                    indexDetailList.clear();
+                }
+                WeatherBean.Indexs indexDetail = weatherBean.getData().getIndex();
+                indexDetailList.add(indexDetail.getAirconditioner());
+                indexDetailList.add(indexDetail.getCarwash());
+                indexDetailList.add(indexDetail.getClothes());
+                indexDetailList.add(indexDetail.getDrying());
+                indexDetailList.add(indexDetail.getSports());
+                indexDetailList.add(indexDetail.getTourism());
+                indexDetailList.add(indexDetail.getUltraviolet());
+                indexDetailAdapter.notifyDataSetChanged();
+                Log.i("Fragment更新","天气指数细节");
 
                 //今日数据填充
                 tv_thum_desc.setText(forecastDayList.get(1).getDayWeather());
