@@ -14,7 +14,7 @@
             <include layout="@layout/item_city_fragment_header"
                 android:id="@+id/layout_header"
                 android:layout_width="match_parent"
-                android:layout_height="600dp"></include>
+                android:layout_height="700dp"></include>
             <include layout="@layout/item_city_fragment_thumb"
                 android:layout_below="@+id/layout_header"
                 android:id="@+id/layout_thumb"
@@ -75,31 +75,34 @@
                 layout="@layout/item_city_fragment_index"
                 android:id="@+id/layout_index"
                 android:layout_marginTop="40dp"
-                android:layout_below="@+id/layout_day"
-                android:layout_width="match_parent"
-                android:layout_height="300dp">
-
-            </include>
-
-            <include
-                layout="@layout/item_index_detail"
-                android:id="@+id/layout_index_detail"
-                android:layout_marginTop="40dp"
-                android:layout_below="@id/layout_index"
+                android:layout_below="@id/layout_day"
                 android:layout_width="match_parent"
                 android:layout_height="300dp">
 
             </include>
             <TextView
                 android:layout_marginTop="50dp"
-                android:layout_marginBottom="80dp"
-                android:layout_below="@id/layout_index_detail"
+
+                android:layout_below="@id/layout_index"
+                android:id="@+id/copyright"
                 android:gravity="center"
                 android:textColor="@color/colorWhite"
                 android:text="CopyRight @Vlasu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="80dp"
+                android:layout_below="@id/copyright"
+                android:id="@+id/support"
+                android:gravity="center"
+                android:text="天气数据技术支持：腾讯天气"
+                android:textColor="#FFF"
+                android:drawableBottom="@mipmap/tencent"/>
         </RelativeLayout>
+
     </ScrollView>
 
 </RelativeLayout>

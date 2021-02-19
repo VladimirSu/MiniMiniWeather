@@ -21,6 +21,14 @@
         android:id="@+id/tv_current_position"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="热门城市"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        />
 
     <GridView
         android:layout_below="@+id/tb_search"

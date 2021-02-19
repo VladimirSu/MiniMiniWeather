@@ -39,6 +39,26 @@
             android:id="@+id/tv_current_wind"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></TextView>
+        <RelativeLayout
+            android:id="@+id/rl_wind"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="120dp">
+            <!--大风车-->
+            <com.yize.miniweather.view.WhiteWindmills
+                android:id="@+id/ww_big"
+                android:layout_width="100dp"
+                android:layout_height="120dp" />
+            <!--小风车-->
+            <com.yize.miniweather.view.WhiteWindmills
+                android:id="@+id/ww_small"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
         <TextView
             style="@style/headerTextStyle"
             android:layout_marginTop="40dp"

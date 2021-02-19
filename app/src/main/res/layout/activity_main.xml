@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/rl_main"
-    android:background="@mipmap/background"
+    android:background="@mipmap/bacground_star"
     tools:context=".view.activity.MainActivity">
     <androidx.appcompat.widget.Toolbar
         app:titleTextColor="@color/colorWhite"

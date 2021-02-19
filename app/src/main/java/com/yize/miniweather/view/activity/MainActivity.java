@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView(){
         rl_main=findViewById(R.id.rl_main);
-        rl_main.setBackgroundResource(R.mipmap.background);
+        rl_main.setBackgroundResource(R.mipmap.bacground_star);
         tb_main=findViewById(R.id.tb_main);
         tv_notice_empty_city=findViewById(R.id.tv_notice_empty_city);
         setSupportActionBar(tb_main);

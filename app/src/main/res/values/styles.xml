@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">#301E68</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -18,5 +18,9 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
     </style>
+    <!--白色风车-->
+    <declare-styleable name="WhiteWindmills">
+        <attr name="windColor" format="reference|color" />
+    </declare-styleable>
 
 </resources>
