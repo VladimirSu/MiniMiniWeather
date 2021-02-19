@@ -17,10 +17,23 @@ MiniWeather是一款中颜值天气APP，可以自动定位查询当前位置天
 ### 1、APP主界面
 
 设置了开始界面，需点击“+”号添加城市显示天气信息。
+
+App分为3个Activity，分别为主Activity，城市搜索Activity，热门城市，城市选取Activity。
+
+在MainActivity中，包含cityFragment与Header，Header负责显示主要的天气信息，cityFragment负责显示详细的天气数据，包括今日天气，最高温最低温，7天天气预报，逐小时预报等。
+
 点击“+”号后进入SearchCityActivity，搜索框下会显示当前位置信息，可以进行点击获取天气详情，跳转回mainactivity，由cityfragment进行数据显示。
 主要天气信息在MainActivity中进行显示。
 CityFragment布局文件使用了ScrollView进行滑动操作，UI设计参考了各大主流天气APP，使用方块模块化显示天气信息，每个模块独立操作。
 在Adapter中存放了各个功能所需的适配器，将json数据解析并显示。
+
+### 2、App截图展示
+
+![](C:\Users\HW\Desktop\未标题-1.png)
+
+
+
+<img src="C:\Users\HW\Desktop\SVID_20210219_171124_1 00_00_00-00_00_30.gif" style="zoom: 67%;" />
 
 ### 3、天气图标抓取
 
@@ -53,3 +66,15 @@ CityFragment布局文件使用了ScrollView进行滑动操作，UI设计参考�
 ## 5、兼容适配
 
 Android 5.0+
+
+## 6、心得体会
+
+从开发一款完整的App中体会到了一款App开发的完整流程，学习了调用API，研究开发文档以及线程之间的交互，。
+
+## 7、待提升优化的地方
+
+目前APP还存在一些bug没有解决，如添加城市后所有城市页面天气没有独立更新UI，显示相同的天气。
+
+以及一些功能，如天气趋势折线图，AQI天气质量数据可视化等等无法实现。
+
+没有调用地图API，显示定位地图与天气APP相结合，当前位置显示有时候会显示NULL值。
