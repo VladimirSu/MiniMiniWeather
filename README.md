@@ -28,10 +28,9 @@ CityFragment布局文件使用了ScrollView进行滑动操作，UI设计参考�
 在Adapter中存放了各个功能所需的适配器，将json数据解析并显示。
 
 ### 2、App截图展示
+![Image](https://github.com/VladimirSu/MiniMiniWeather/blob/master/ScreenShot.png)
+![Image](https://github.com/VladimirSu/MiniMiniWeather/blob/master/Function%20showing.gif)
 
-![](D:\su-heng1-MiniWeather-master\MiniWeather\ScreenShot.png)
-
-<img src="D:\su-heng1-MiniWeather-master\MiniWeather\Function showing.gif" style="zoom: 50%;" />
 
 ### 3、天气图标抓取
 
